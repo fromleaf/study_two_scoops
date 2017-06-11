@@ -29,7 +29,8 @@ wheels/
 .idea
 
 # Django
-two_scoops/settings.py
+db.sqlite3
+settings/settings.py
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
