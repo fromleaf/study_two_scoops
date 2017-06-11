@@ -12,7 +12,7 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault(
-    "DJANGO_SETTINGS_MODULE", "two_scoops.config.settings.settings"
+    "DJANGO_SETTINGS_MODULE", "settings.settings"
 )
 
 application = get_wsgi_application()
