@@ -30,7 +30,7 @@ wheels/
 
 # Django
 db.sqlite3
-settings/settings.py
+two_scoops/config/settings/local.py
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
