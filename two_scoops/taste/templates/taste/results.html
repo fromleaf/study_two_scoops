@@ -1,0 +1,16 @@
+{% extends "common/base.html" %}
+
+{% block title %}Tastings{% endblock title %}
+
+{% block content %}
+    <ul>
+    {% for taste in tastings %}
+        <li>
+            <a href="{% url "tastings:detail" taste.pk %}">{{ taste.title }}</a>
+            <small>
+                (<a href="{% url "tastings:update" taste.pk %}">update</a>)
+            </small>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock content %}

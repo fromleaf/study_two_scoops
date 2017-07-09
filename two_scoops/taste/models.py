@@ -24,3 +24,7 @@ class FlavorReview(models.Model):
 
     # 커스텀 모델 메니저를 여기에 추가
     objects = PublishedManager()
+
+
+class Tasting(models.Model):
+    taste = models.CharField(max_length=100)
