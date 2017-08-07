@@ -28,3 +28,7 @@ class FlavorReview(models.Model):
 
 class Tasting(models.Model):
     taste = models.CharField(max_length=100)
+
+
+class Taster(models.Model):
+    taster = models.CharField(max_length=100)

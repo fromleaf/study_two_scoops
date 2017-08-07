@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from cached_property import cached_property
+
 from django.core.exceptions import ObjectDoesNotExist
 from django.views.generic import (
     ListView, UpdateView, TemplateView, DetailView, CreateView
@@ -11,6 +13,7 @@ from store.exceptions import OutOfStock
 
 from .models import Flavor, Tasting
 from .tasks import update_users_who_favorited
+
 
 def list_flavor_line_item(sku):
     try:

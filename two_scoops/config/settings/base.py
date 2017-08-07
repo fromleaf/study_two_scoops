@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'core',
     'taste',
     'store',
+    'purchase',
+    'flavors',
 ]
 
 MIDDLEWARE = [
