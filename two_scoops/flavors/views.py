@@ -1,9 +1,14 @@
 # flvors/views.py
 import json
 
+from braces.views import LoginRequiredMixin
+from core.models import ModelFormFailureHistory
 from django.contrib import messages
 from django.core import serializers
-from core.models import ModelFormFailureHistory
+from django.views.generic import CreateView, UpdateView, DetailView
+
+from .models import Flavor
+from .forms import FlavorForm
 
 
 class FlavorActionMixin(object):
@@ -26,3 +31,17 @@ class FlavorActionMixin(object):
             model_data=model_data
         )
         return super(FlavorActionMixin, self).form_invalid(form)
+
+
+class FlavorCreateView(LoginRequiredMixin, FlavorActionMixin, CreateView):
+    success_msg = "created"
+    form_class =  FlavorForm
+
+
+class FlavorUpdateView(LoginRequiredMixin, FlavorActionMixin, UpdateView):
+    success_msg = "updated"
+    form_class = FlavorForm
+
+
+class FlavorDetailView(DetailView):
+    model = Flavor
