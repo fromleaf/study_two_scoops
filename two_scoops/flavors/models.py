@@ -4,6 +4,7 @@ from django.db import models
 
 from core.models import TastyTitleAbstractModel
 
+
 class Flavor(TastyTitleAbstractModel):
     name = models.CharField(default='', null=False)
     flavor = models.CharField(default='', null=False)
